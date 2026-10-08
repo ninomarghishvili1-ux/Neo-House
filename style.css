@@ -942,7 +942,7 @@ img {
   }
 
   .languages {
-    display: none;
+    display: flex;
   }
 
   .hero {
