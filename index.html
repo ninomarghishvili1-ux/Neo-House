@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Neo House — უძრავი ქონების სააგენტო თბილისში."
+    />
+
+    <title>Neo House | უძრავი ქონება</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Noto+Serif+Georgian:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Leaflet Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     HEADER
+===================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="container nav">
+        <!-- LOGO -->
+        <a href="#home" class="brand" aria-label="Neo House">
+          <img src="logo.png" alt="Neo House" />
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#home" data-i18n="navHome"> მთავარი </a>
+
+          <a href="#about" data-i18n="navAbout"> ჩვენ შესახებ </a>
+
+          <a href="#services" data-i18n="navServices"> სერვისები </a>
+
+          <a href="#contact" data-i18n="navContact"> კონტაქტი </a>
+        </nav>
+
+        <!-- RIGHT SIDE -->
+        <div class="nav-actions">
+          <!-- LANGUAGE -->
+          <div class="languages" aria-label="Language">
+            <button type="button" class="lang active" data-lang="ka">KA</button>
+
+            <button type="button" class="lang" data-lang="en">EN</button>
+
+            <button type="button" class="lang" data-lang="ru">RU</button>
+          </div>
+
+          <!-- PHONE -->
+          <a class="nav-phone" href="tel:+995599098798"> +995 599 09 87 98 </a>
+
+          <!-- MOBILE MENU -->
+          <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE NAVIGATION -->
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#home" data-i18n="navHome"> მთავარი </a>
+
+        <a href="#about" data-i18n="navAbout"> ჩვენ შესახებ </a>
+
+        <a href="#services" data-i18n="navServices"> სერვისები </a>
+
+        <a href="#contact" data-i18n="navContact"> კონტაქტი </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =====================================================
+     HERO
+===================================================== -->
+
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+          <p class="eyebrow light">NEO HOUSE</p>
+
+          <h1 data-i18n="heroTitle">
+            თქვენი ახალი<br />
+            მისამართი იწყება აქ
+          </h1>
+
+          <p class="hero-text" data-i18n="heroText">
+            უძრავი ქონების პროფესიონალები, რომლებიც თქვენს საჭიროებებს სწორ
+            გადაწყვეტილებად აქცევენ.
+          </p>
+
+          <div class="hero-buttons">
+            <a
+              class="button button-primary"
+              href="#contact"
+              data-i18n="heroButton"
+            >
+              დაგვიკავშირდით
+            </a>
+
+            <a class="button button-outline" href="#about" data-i18n="heroMore">
+              გაიგეთ მეტი
+            </a>
+          </div>
+        </div>
+
+        <div class="scroll-mark">SCROLL</div>
+      </section>
+
+      <!-- =====================================================
+     ABOUT
+===================================================== -->
+
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="aboutEyebrow">ჩვენ შესახებ</p>
+
+            <h2 data-i18n="aboutTitle">
+              უძრავი ქონება,<br />
+              <strong> სწორი ადამიანებისთვის. </strong>
+            </h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-photo reveal" aria-hidden="true"></div>
+
+            <div class="about-copy reveal">
+              <p class="lead" data-i18n="aboutLead">
+                Neo House არის უძრავი ქონების სააგენტო, რომელიც ადამიანებს სწორი
+                არჩევანის გაკეთებაში ეხმარება.
+              </p>
+
+              <p data-i18n="aboutText">
+                ჩვენთვის თითოეული კლიენტი განსხვავებულია. ამიტომ ვუსმენთ,
+                ვაანალიზებთ და ვთავაზობთ გადაწყვეტილებას, რომელიც რეალურად
+                შეესაბამება მის მიზნებს.
+              </p>
+
+              <div class="small-line"></div>
+
+              <div class="signature">
+                NEO
+                <span>HOUSE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     SERVICES
+===================================================== -->
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow" data-i18n="servicesEyebrow">რას ვაკეთებთ</p>
+
+            <h2 data-i18n="servicesTitle">
+              სერვისი, რომელიც<br />
+              <strong> შედეგზეა ორიენტირებული. </strong>
+            </h2>
+          </div>
+
+          <div class="services-grid">
+            <!-- SERVICE 1 -->
+
+            <article class="service-card reveal">
+              <span class="service-number"> 01 </span>
+
+              <div class="service-icon">⌂</div>
+
+              <h3 data-i18n="service1Title">უძრავი ქონების კონსულტაცია</h3>
+
+              <p data-i18n="service1Text">
+                პროფესიონალური კონსულტაცია თქვენი მიზნებისა და ბიუჯეტის
+                შესაბამისად.
+              </p>
+            </article>
+
+            <!-- SERVICE 2 -->
+
+            <article class="service-card reveal">
+              <span class="service-number"> 02 </span>
+
+              <div class="service-icon">◇</div>
+
+              <h3 data-i18n="service2Title">ყიდვა და გაყიდვა</h3>
+
+              <p data-i18n="service2Text">
+                მხარდაჭერა უძრავი ქონების ყიდვა-გაყიდვის პროცესის ყველა ეტაპზე.
+              </p>
+            </article>
+
+            <!-- SERVICE 3 -->
+
+            <article class="service-card reveal">
+              <span class="service-number"> 03 </span>
+
+              <div class="service-icon">◎</div>
+
+              <h3 data-i18n="service3Title">პერსონალური მიდგომა</h3>
+
+              <p data-i18n="service3Text">
+                ვაფასებთ თქვენს საჭიროებებს და ვეძებთ თქვენთვის სწორ
+                შესაძლებლობას.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     CONTACT
+===================================================== -->
+
+      <section class="section contact" id="contact">
+        <div class="container contact-grid">
+          <!-- CONTACT INFO -->
+
+          <div class="contact-info reveal">
+            <p class="eyebrow light" data-i18n="contactEyebrow">
+              დაგვიკავშირდით
+            </p>
+
+            <h2 data-i18n="contactTitle">
+              მოდით,<br />
+              <strong> ვისაუბროთ. </strong>
+            </h2>
+
+            <p data-i18n="contactText">
+              გაქვთ კითხვა ან გსურთ კონსულტაცია? დაგვიკავშირდით და ჩვენი გუნდი
+              დაგეხმარებათ.
+            </p>
+
+            <div class="contact-details">
+              <a href="tel:+995599098798">
+                <small> PHONE </small>
+
+                <span> +995 599 09 87 98 </span>
+              </a>
+
+              <a href="mailto:neohouse.brokers@gmail.com">
+                <small> EMAIL </small>
+
+                <span> neohouse.brokers@gmail.com </span>
+              </a>
+
+              <div>
+                <small> ADDRESS </small>
+
+                <span data-i18n="address"> ალ. ყაზბეგის გამზირი, თბილისი </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT FORM -->
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-row">
+              <label>
+                <span data-i18n="nameLabel"> სახელი </span>
+
+                <input type="text" name="name" required />
+              </label>
+
+              <label>
+                <span data-i18n="phoneLabel"> ტელეფონი </span>
+
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
+
+            <label>
+              <span data-i18n="emailLabel"> ელფოსტა </span>
+
+              <input type="email" name="email" />
+            </label>
+
+            <label>
+              <span data-i18n="messageLabel"> შეტყობინება </span>
+
+              <textarea name="message" rows="5"></textarea>
+            </label>
+
+            <button
+              class="button button-primary"
+              type="submit"
+              data-i18n="sendButton"
+            >
+              გაგზავნა →
+            </button>
+
+            <p class="form-result" id="formResult" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     MAP
+===================================================== -->
+
+      <section class="map-section">
+        <div id="map"></div>
+
+        <div class="map-card">
+          <img src="logo.png" alt="Neo House" />
+
+          <p data-i18n="mapText">თბილისი, საქართველო</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img class="footer-logo" src="logo.png" alt="Neo House" />
+
+            <p data-i18n="footerText">უძრავი ქონების პროფესიონალები.</p>
+          </div>
+
+          <div class="footer-column">
+            <small> MENU </small>
+
+            <a href="#home" data-i18n="navHome"> მთავარი </a>
+
+            <a href="#about" data-i18n="navAbout"> ჩვენ შესახებ </a>
+
+            <a href="#services" data-i18n="navServices"> სერვისები </a>
+
+            <a href="#contact" data-i18n="navContact"> კონტაქტი </a>
+          </div>
+
+          <div class="footer-column">
+            <small> CONTACT </small>
+
+            <a href="tel:+995599098798"> +995 599 09 87 98 </a>
+
+            <a href="mailto:neohouse.brokers@gmail.com">
+              neohouse.brokers@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 Neo House </span>
+
+          <span> Tbilisi, Georgia </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Leaflet -->
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
